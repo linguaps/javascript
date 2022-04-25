@@ -1,0 +1,17 @@
+RETIREMENT CALCULATOR
+
+Input: Digits
+
+Output: Strings, digits
+
+Constraints: -Input can be only numbers.	
+-The age, the user wants to retire may not necessarily mean that she/he is qualified to retire at that time
+-Only years with 4 digits (e.g. 2020, 2090 etc.) and numbers with 2/3 digits referring to age (45, 102 etc.) will be used.
+
+Processes: - Get the user's inputs
+- define them
+- write a function to do the math and display the output
+	-At first, yearDif= futureAge - currentAge
+	-Then, futureYear= currentYear + yearDif
+	-Display "You have ${yearDif} years left until you can retire.
+	It's 2022, so you can retire in ${futureYear}."

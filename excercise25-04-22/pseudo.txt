@@ -1,0 +1,12 @@
+RETIREMENT CALCULATOR
+=======================
+
+
+-define variables
+    -userAge, futureAge, yearDif, currentYear, futureYear
+-prompt(userAge)
+-prompt(futureAge)
+-yearDif = futureAge- userAge
+-futureYear = currentYear + yearDif
+-Display "You have ${yearDif} years left until you can retire.
+	It's ${currentYear}, so you can retire in ${futureYear}."
