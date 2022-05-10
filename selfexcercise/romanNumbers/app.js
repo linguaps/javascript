@@ -1,8 +1,6 @@
 
-var input= document.getElementById('myInput').value;
-
+var inputElement = document.getElementById('myInput');
 function intToRoman(num) {
-   
   let result = "";
   while(num){
      if(num>=1000){
@@ -63,7 +61,27 @@ function intToRoman(num) {
 
 // var numByUser = parseInt(input).value;
 let submit = document.getElementById("submit");
-submit.onclick = () => {console.log(intToRoman(input))}
+submit.onclick = () => {
+var numByUser = inputElement.value;
+var result = intToRoman(numByUser);
+var li = document.createElement("li");
+li.innerText = `${numByUser} = ${result};`
+if (numByUser == ""){
+   alert("Please write a number to convert to Roman number..")
+} else
+var ul = document.getElementById("myUl");
+ul.appendChild(li);
+
+myInput.value = "";
+
+}
+
+
+   
+   
+   
+   
+   // console.log(intToRoman(inputElement.value))}
 
 
 // let input = document.getElementById("myInput");

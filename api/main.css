@@ -1,0 +1,22 @@
+/** add layout styles: grid and flex */
+
+html {
+    box-sizing: border-box;
+    font-size: 0.625em;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    color: #1d1d1b;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+body {
+    background: #f1f1f1;
+    margin: 0;
+}
+
