@@ -3,7 +3,7 @@
 var listItems = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < listItems.length; i++) {
-    var xbutton = document.createElement("span");  
+    var xbutton = document.createElement("span");
     var txt = document.createTextNode("\u00D7");
     xbutton.className = "close";
     xbutton.appendChild(txt);
@@ -15,7 +15,7 @@ for (i = 0; i < listItems.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+    close[i].onclick = function () {
         var div = this.parentElement;
         div.style.display = "none";
     }
@@ -23,35 +23,34 @@ for (i = 0; i < close.length; i++) {
 
 // Add a "checked" symbol when clicking on a list item
 
-var list = document.querySelector("ul");
-var li = document.getElementsByClassName("li");
-list.addEventListener("click", function() {
-    if (li.tagName === 'li') {
-        li.classList.toggle('checked');
-    }
-}, false);
-
 // // Create a new list item when clicking on the "Add" button
-function newElement(){
-var li = document.createElement('li');
-var inputValue = document.getElementById("myInput").value;
-var t = document.createTextNode(inputValue);
-li.appendChild(t);
-if (inputValue === '') {
-    alert("You must write something!");
-} else {
-    document.getElementById("myUl").appendChild(li);
-}
-document.getElementById("myInput").value = "";
+function newElement() {
+    var li = document.createElement('li');
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        document.getElementById("myUl").appendChild(li);
+    }
 
-    var xbutton = document.createElement("span");  
+    li.onclick = (event) => {
+        if (li.className == ''){
+       li.setAttribute('class', 'checked');
+    }   else {li.className= ''}
+
+    }
+    document.getElementById("myInput").value = "";
+
+    var xbutton = document.createElement("span");
     var txt = document.createTextNode("\u00D7");
     xbutton.className = "close";
     xbutton.appendChild(txt);
     li.appendChild(xbutton);
 
-    for(i = 0; i < close.length; i++) {
-        close[i].onclick = function(){
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
             var div = this.parentElement;
             div.style.display = "none";
         }
